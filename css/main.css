@@ -1,0 +1,2 @@
+@import url(vendor/reset.css);*,*::after,*::before{box-sizing:border-box}html{font-size:62.5%}body{font-size:1.6rem;font-family:"Helvetica Neue",Helvetica,sans-serif;color:#333;background-color:#fff}a{color:#62c169;text-decoration:none}img,embed,object,video,svg{max-width:100%}input,textarea{font-family:inherit;font-size:1.6rem}.container{width:90%;max-width:1170px;margin:0 auto}.container::after{clear:both;content:"";display:block}
+/*# sourceMappingURL=main.css.map */
