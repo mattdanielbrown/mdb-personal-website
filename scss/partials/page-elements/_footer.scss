@@ -1,0 +1,14 @@
+
+
+// Styles text in the page <footer> element...
+// which is likely just copyright text that is small and low-contrast
+// and the footer element needs a bit of padding around this text, and maybe a little extra top margin
+footer {
+    //font-size: 1rem;
+    text-align: center;
+    //margin: auto;
+    margin: 0 auto 1rem auto;
+    padding: 1rem;
+    font-size: modular-scale(-1);
+    color: tint($font-color, 40%);
+}

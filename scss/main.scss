@@ -1,0 +1,61 @@
+@import "bourbon/bourbon";
+
+// Import the (S)CSS Reset
+@import "vendor/reset";                 // SCSS version of a CSS Reset; customized version of Meyer's CSS Reset
+
+// Import the Google font reference
+//      ( These are all commented out by default; To activate, go into the file and uncomment desired font. )
+@import "vendor/google-fonts";
+
+
+//  SASS MQ MIXIN –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//
+/*  Origin, and for further documentation:  https://github.com/sass-mq/sass-mq    */
+//
+// Set the Sass MQ mixin partial breakpoint variables
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  740px,
+    desktop: 980px,
+    wide:    1300px
+);
+
+// Import the Sass MQ mixin
+@import 'vendor/mq';
+
+/*  SASS MQ EXAMPLE USAGE:
+
+.foo {
+    @include mq($from: mobile, $until: tablet) {
+        background: red;
+    }
+    @include mq($from: tablet) {
+        background: green;
+    }
+}
+*/
+
+// UNCOMMENT THE FOLLOWING
+// if you want to display the currently active breakpoint in the top
+// right corner of your site during development, add the breakpoints
+// to this list, ordered by width, e.g. (mobile, tablet, desktop).
+//
+//$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+//
+//  END SASS MQ MIXIN ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+
+// Import the basics
+@import 'partials/base/variables';      // colors, fonts etc...
+@import 'partials/base/mixins';         // custom mixins
+@import 'partials/base/layout';         // responsive grid and media queries
+@import 'partials/base/typography';     // set typographic styles
+
+// Import the common components
+@import "partials/components";
+// Import the page eleeents
+@import "partials/page-elements";
+
+// Import the project specific styles
+@import "partials/defaults";            // place for primary / final styling and overrides

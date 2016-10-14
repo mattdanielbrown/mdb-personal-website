@@ -1,0 +1,51 @@
+//
+//  Styles the navigation (bar) of the page.
+//      (there should only be one, so just styleing the <nav> element and it's decsendents should suffice)
+//
+
+
+// Nav is an absolute positioned, floating element (maybe fixed)
+//      > with an unordered, unstyled list inside of it
+//          > which has un-decorated list items, which are inline
+//              > which each contain a link element
+nav {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+
+    ul {
+        list-style: none;
+
+        li {
+            text-decoration: none;
+            list-style: none;
+            display: inline;
+            margin: 2rem;
+
+            a {
+                text-decoration: none;
+                text-align: center;
+                margin: auto;
+                color: $link-default-color;
+
+                -webkit-transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                -ms-transition: all 0.2s;
+                -o-transition: all 0.2s;
+                transition: all 0.2s;
+
+                &:link, &:visited {
+                    color: $link-default-color;
+                }
+                &:hover, &:focus {
+                    color: tint($link-default-color, 50%);
+                    outline: none;
+                }
+                &:active {
+                    color: tint($link-default-color, 80%);
+                    outline: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+/*
+ *
+ *		The following applies common styles to headings, as well
+ *		as sets their sizes to a modular scale.
+ *		The modular scale is provided by the Bourbon, and it's
+ *		default ratio is 1.333 (perfect fourth).
+ *		That can be changed by setting the variable like so:
+ *
+ *			$modular-scale-ratio: $golden;
+ *				
+ *					(Or)
+ *
+ *			$modular-scale-base: 1.2em;
+ *
+ *		For more info, check out http://bourbon.io/docs/#modular-scale
+ *
+ *		Personally, I use this method of sizing the headings,
+ *		plus setting media query styles on the HTML element
+ *		based on screen size (and then adjusting the `font-size:`
+ *		property based on percentages) to achieve a quick,
+ *		semi-responsive layout (or at least, type sizes).
+ *
+ */
+
+//
+//  Body , Paragraph Styles
+//
+
+p {
+    line-height: 2;
+    color: $font-color;
+}
+
+// Modular scale variables
+//$modular-scale-base: 18px;
+
+//
+// Headings' Style
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -1px;
+    color: $font-color;
+}
+
+//
+// Headings Sizes Based On Modular Scale
+//
+
+h1 {
+    font-size: modular-scale(4);
+}
+
+h2 {
+    font-size: modular-scale(3);
+}
+
+h3 {
+    font-size: modular-scale(2);
+}
+
+h4 {
+    font-size: modular-scale(1);
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+h5 {
+    font-size: modular-scale(0);
+    font-weight: 300;
+    letter-spacing: normal;
+}
+
+h6 {
+    font-size: modular-scale(-1);
+    font-weight: 700;
+    letter-spacing: normal;
+    color: darkgray;
+}

@@ -1,0 +1,63 @@
+//
+//
+//      This is mobile friendly (responsive), inline (horizontal / grid) list of icons.
+//          Mostly meant for a SERVICES or FEATURES section.
+//
+//
+
+
+//  USAGE:
+//          * @extend this in a <ul> element
+//          * then nest selectors for <li> elements within it
+%inline-icon-grid-list {
+    // Since this is mobile-first, start out by styling as though it's mobile. (The list starts out as vertical
+    //      and then switches to a horizontal layout when the screen is large enough)
+    @include flexArrange(v, s);
+    flex-wrap: wrap;
+
+    // Switch to horizontal layout
+    @include mq($from: tablet) {
+        flex-direction: row;
+    }
+
+    li {
+        // allow list items to grow and shrink, but base them off a 30% size (theoretically placing 3 items per row)
+        flex: 1 1 30%;
+        margin: 0 1rem 6rem 1rem;
+        text-align: center;
+
+        // The list item icon
+        //.inline-icon-grid-list-icon {
+        img {
+            width: 100%;
+            max-width: 50px;    // probably temporary
+            height: auto;
+
+            border-radius: 50%; // Temporary
+
+            text-align: center;
+            margin: 0 auto 1rem auto;
+        }
+
+        // The list item title
+        //.inline-icon-grid-list-title {
+        h5 {
+            text-align: center;
+            margin: 0 auto 1rem auto;
+            font-size: modular-scale(1);
+            font-weight: 400;
+        }
+
+        // The list item description
+        //.inline-icon-grid-list-description {
+        p {
+            text-align: center;
+            margin: 0 auto 0 auto;
+            font-size: 1rem;
+            line-height: 1.5;
+            width: 80%;
+
+        }
+
+    }
+}

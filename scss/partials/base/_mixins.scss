@@ -1,0 +1,170 @@
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+// border radius
+
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+// antialiasing mode font rendering
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// clearfix
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+// color tint and shade
+
+@function shade(
+    $color,
+    $percent
+  ) {
+
+  @return mix(#000, $color, $percent);
+}
+@function tint(
+    $color,
+    $percent
+  ) {
+
+  @return mix(#fff, $color, $percent);
+}
+
+
+/*
+ * Quickly arrange child elements using flex.
+ *
+ *	@param($direction, $distribution)
+ *
+ *		$direction: Sets the axis the items are aligned to.
+ *			[v, vertical, c, column | h, horizontal, r, row]  (!optional - default = v)
+ *			... amounts to `flex-direction:` ...
+ *
+ *		$distribution: Sets how items are arranged along main axis.
+ *			[c, center | sa, a, space-around | sb, b, space-between]  (!optional - default = c)
+ *			... sets the `justify-content:` property...
+ *
+ *	[Example Usage:]
+ *
+ *  .class {
+ *		@include flexArrange(vertical, sa);
+ *  }	
+ *
+ *	---OUTPUTS TO:
+ *
+*	.class {
+ * 		display: flex;
+ * 		align-items: center;
+ * 		align-content: center;
+ * 		flex-direction: column;
+ * 		justify-content: space-around;
+ *      }
+ */
+@mixin flexArrange($direction: v, $distribution: c) {
+	// set the constants
+	display: flex;
+	align-items: center;
+	align-content: center;
+	// Set direction
+	@if($direction==v or $direction=='vertical' or $direction==column) {
+		flex-direction: column;
+	}
+	@else {
+		flex-direction: row;
+	}
+	// Set content distribution
+	@if($distribution==c or $distribution==center) {
+		justify-content: center;
+	}
+	@else if($distribution==s or $distribution==sa or $distribution==space-around) {
+		justify-content: space-around;
+	}
+	@else {
+		justify-content: space-between;
+	}
+}
+
+/*
+ * Set to fullscree size mixin
+ *
+ *	@param ($exactHeight: false)
+ *
+ *		$exactHeight: [true | false ] -
+ *			Whether or not the element must only be the exact height of
+ *			the window, and no more.
+ *			(!Optional) default = false
+ *			... if false, `min-height` property is set to 100vh, so element can be taller
+ *				than the window and must only be at least that tall.
+ *			... if true, `height` property is set to 100vh, so the element must be
+ *				EXACTLY the height of the window, NO MORE, NO LESS.
+ */
+@mixin fullscreen($exactHeight: false) {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	
+	@if($exactHeight == true) {
+		height: 100vh;
+	} @else {
+		min-height: 100vh;
+	}
+}
+
+/*
+ *	Set margins/and/or/paddings to zero
+ *
+ *	@param($marginPadding: both)
+ *
+ *		$marginPadding: [ m, margin | p, padding | b, both]  - (!Optional: default=both)
+ *			...Sets which of the two (margins, padding, or both) to be set to zero.
+ */
+@mixin noMarginPadding($marginPadding: both) {
+	@if($marginPadding == m or $marginPadding == margin) {
+		margin: 0;
+	} @else if($marginPadding == p or $marginPadding == pading) {
+		padding: 0;
+	} @else {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/*
+ *	Centers text alignment (via `text-align: center`).
+ *	When `text-align: center` is set, the left and right margins should be set to AUTO.
+ */
+%centerText {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}

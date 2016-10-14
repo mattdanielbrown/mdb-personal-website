@@ -1,0 +1,25 @@
+// colors
+
+$color-1: #333333; // main text
+$color-2: #62c169; // anchor tags
+$color-3: #ffffff; // body background color
+
+$button-default-color: #4688F1;
+$link-default-color: $color-2;
+$input-default-background-color: #F5F6FA;
+$input-default-border0color: #E2E1E0;
+
+$font-color: #4D5C65;
+
+// fonts
+
+// This is just the absolute bare minimum...
+// Google fonts are referenced in ../../vendor/_google-fonts.css
+// go into that file and uncomment desired fonts and change
+// this variable's value to whatever that is.
+
+$primary-font-main: 'Source Sans Pro';                                        // Main font.
+
+$primary-font-fallback: "Helvetica Neue", Helvetica, Arial, sans-serif;       // Fallback font if main font is not available.
+
+$primary-font: $primary-font-main, $primary-font-fallback;                    // Project font (includes main and fallback).

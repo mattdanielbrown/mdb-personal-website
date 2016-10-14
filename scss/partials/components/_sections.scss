@@ -1,0 +1,30 @@
+section {
+    @include fullscreen();
+    //min-height: 50vh;           // TEMPORARY
+    margin-bottom: 8rem;        // TEMPORARY
+    //border: red solid 1px;
+    @include flexArrange(v, c);
+    .container {
+
+        //border: red solid 1px;
+        header {
+            display: block;
+            text-align: center;
+            margin: 1rem auto 2rem auto;
+            //border: red solid 1px;
+            // When there is a subtitle in the section header , it needs extra vertical spacing
+            h2, h3 {
+                margin-bottom: 1rem;
+            }
+            h4, h5, h6 {
+                margin-top: 0;
+                margin-bottom: 0;
+                //margin-bottom: 2rem;
+            }
+        }
+
+        .section-content {
+            margin-top: 4rem;
+        }
+    }
+}

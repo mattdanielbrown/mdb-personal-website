@@ -1,0 +1,77 @@
+// Note: I was using Autoprefixer to add the vendor prefixes
+//	(https://github.com/postcss/autoprefixer) via gulp,
+// 	 but lately I've been using the CodeKit App and
+//	letting it handle all the SCSS compiling,
+//	prefixing, and compression.
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+//  * THIS FILE JUST HOLDS A FEW RANDOM
+//  * STYLE 'defaults' I AM FOND OF.
+//  * THIS FILE ISN'T ESSENTIAL AND 
+//  * CAN (AND PROBABLY SHOULD) BE
+//  * MODIFIED OR DELETED.
+
+/* ----------------------------------------------------------------
+Primary style
+---------------------------------------------------------------- */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html {
+    //font-size: 62.5%;
+    font-size: 100%;
+
+    // disable font adjustment on iPhone and other webkit-based browsers
+    -webkit-text-size-adjust: none;
+
+    @include font-smoothing;
+}
+
+body {
+    font: {
+        //size: 1.6em;
+        size: 1.125em;
+        //size: 1em;
+        //size: modular-scale(0);
+        family: $primary-font; // variables inside partials > _variables.scss
+    }
+    //color: $color-1;
+    background-color: $color-3;
+    color: $font-color;
+    line-height: 1.5;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+a {
+    color: $color-2;
+    text-decoration: none;
+}
+
+img, embed, object, video, svg {
+    max-width: 100%;
+}
+
+input, textarea {
+    font-family: inherit;
+    font-size: 1.6rem;
+}
+
+/* ----------------------------------------------------------------
+Patterns - reusable parts of the design
+---------------------------------------------------------------- */
+
+.container {
+
+    /* this class is used to give a max-width to the element it is applied to,
+    and center it horizontally when it reaches that max-width */
+
+    width: 80%;
+    max-width: 980px; // breakpoints inside partials > _layout.scss
+    margin: 0 auto;
+    @include clearfix;
+}

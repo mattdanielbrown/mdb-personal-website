@@ -1,0 +1,22 @@
+#about-section {
+    .container {
+        text-align: center;
+        margin: auto;
+        .section-content {
+            img {
+                max-width: 120px;
+                height: auto;
+                text-align: center;
+                margin: 2rem auto 4rem auto;
+                border-radius: 50%;
+            }
+            p {
+                text-align: center;
+                margin: auto;
+                width: 70%;
+                line-height: 2.5;
+                font-size: 1.25rem;
+            }
+        }
+    }
+}

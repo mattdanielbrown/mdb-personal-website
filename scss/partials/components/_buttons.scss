@@ -1,0 +1,78 @@
+
+// Base / default (fill, solid colored background) button style placeholder.
+// Responsible for complete style of the default buttons, and input[type=button] input[type=submit] elements
+//      > so is @extend'd in the <button> tag style definition, and in the input types [=button, =submit]
+%button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background: $button-default-color;
+    color: white;
+    border: $button-default-color solid 1px;
+    border-radius: 3px;
+
+    min-height: 32px;
+    min-width: 72px;
+
+    cursor: pointer;
+
+    //font-size: 1.25rem;
+    font-size: 1rem;
+    padding: .7rem 1.5rem;
+
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:hover, &:focus {
+        background: shade($button-default-color, 15%);
+        border-color: shade($button-default-color, 15%);
+        outline: none;
+    }
+
+    &:active {
+        background: shade($button-default-color, 30%);
+        @include transform(scale(0.9));
+    }
+}
+
+// Modifies the default (fill/solid background color) button styles to create a hollow/ghost/outlin button
+.outline {
+    background: transparent;
+    color: $button-default-color;
+
+    &:hover, &:focus {
+        //border-color: shade($button-default-color, 15%);
+        background: transparent;
+        color: shade($button-default-color, 15%);
+    }
+    &:active {
+        //border-color: shade($button-default-color, 30%);
+        background: transparent;
+        color: shade($button-default-color, 30%);
+    }
+}
+
+// Implements the button styles by @extend'ing the %button placeholder styles to all <button> elements
+button {
+    @extend %button;
+}
+
+//
+//  Button Groups
+//
+
+// This styles a container <div> element that houses multiple inline buttons.
+// Specificaly giving them more horiztonal spacing.
+// This is achieved by overriding styles of <button> elements that are inside .button-group elemtns
+.button-group {
+    button {
+                                // only adds space to the RIGHT of buttons... since they group Left to Right.
+        margin-right: 1rem;     // This might need to change if the .button-group is not     [ text-align: left ]
+    }
+}

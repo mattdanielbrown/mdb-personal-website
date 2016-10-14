@@ -1,0 +1,92 @@
+//
+//
+//
+
+// STYLE THE FORM AS A WHOLE
+form {
+    max-width: 60%;
+    //text-align: center;
+    margin: auto;
+}
+
+// Form legend elements (basically just hide them) >>> <legend> are just used for accessiblity right now.
+legend {
+    display: none;
+}
+
+// Input Label Elements (basically just hide them) >>> <labels> are just used for accessiblity right now.
+label {
+    display: none;
+}
+
+// STYLES USED ACROSS ALL <input> ELEMENTS THAT DEAL WITH TEXT (i.e., text, email, textarea] AND THEIR PSUEDO SELECTOR STATES
+#{$all-text-inputs} {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 3px;
+    border: $input-default-border0color solid 1px;
+
+    //font-size: 1.6rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: .75rem;
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+
+    @include placeholder {
+        font-size: 1rem;
+    }
+}
+#{$all-text-inputs-hover} {
+    border-color: shade($input-default-border0color, 20%);
+}
+#{$all-text-inputs-focus}, #{$all-text-inputs-active} {
+    border-color: $button-default-color;
+    outline: none;
+}
+
+// SPECIFIC OVERRIDES FOR INPUTS OF TYPE [ text | email ], [text]. and [email]     (which need specific layout styles)
+input[type=text], input[type=email] {
+
+    margin-top: 1rem;
+    width: 48%;
+}
+input[type=text] {
+    float: left;
+}
+input[type=email] {
+    float: right;
+}
+
+// OVERRIDES FOR TEXTAREA ELEMENTS
+textarea {
+    width: 100%;
+    font-size: 1rem !important;
+    @include placeholder {
+        font-size: 1rem;
+    }
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    resize: none;
+
+}
+
+// STYLES THE input[type=submit] ELEMENTS TO MAKE THEM LIKE NORMAL BUTTONS
+input[type=submit] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    @extend %button;
+    font-size: 1rem;
+
+}

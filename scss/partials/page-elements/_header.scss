@@ -1,0 +1,9 @@
+#page-header {
+    @include fullscreen(true);
+    //height: 40vh;                   // temporary
+    @include flexArrange(v, c);
+
+    h1 {
+        margin-top: 1rem;
+    }
+}
