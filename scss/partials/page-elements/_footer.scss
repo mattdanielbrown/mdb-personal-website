@@ -11,4 +11,9 @@ footer {
     padding: 1rem;
     font-size: modular-scale(-1);
     color: tint($font-color, 40%);
+
+    p {
+        font-size: inherit;
+        color: inherit;
+    }
 }

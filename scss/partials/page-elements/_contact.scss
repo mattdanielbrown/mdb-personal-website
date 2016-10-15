@@ -1,11 +1,69 @@
+// This is currently the only page element (section) that actually has multiple 'page' sections...
+//      (i.e., the contact form is the first half, which fills a whole window height -
+//          and then the second, lower half is the contact details info. This also fills a window height)
+
+// The contact form section
 #contact {
     .container {
         header {
-
         }
 
         .section-content {
             margin: 0;
+        }
+    }
+}
+
+// List of contact details
+#contact-details {
+    //border: red solid thin;
+    .container {
+        //border: red solid thin;
+        //@include flexArrange(v, s);
+        text-align: center;
+        margin: auto;
+    }
+}
+
+// Actual contact detail list (phone, email, location)
+#contact-list {
+    //border: red solid thin;
+
+    //text-align: center;
+    margin: 2rem auto 4rem auto;
+    text-align: left;
+    li {
+        //border: red solid thin;
+        vertical-align: middle;
+        //margin-bottom: 5rem;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 48px;
+            vertical-align: middle;
+            margin: 1rem;
+        }
+        p {
+            display: inline;
+            vertical-align: middle;
+            font-size: modular-scale(2);
+            //text-align: center;
+            font-weight: 400;
+            margin: 1rem auto;
+        }
+    }
+}
+
+// Social media links
+#social-list {
+    margin: 2rem auto 4rem auto;
+    li {
+        display: inline;
+        margin: 2rem;
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 50px;
         }
     }
 }
