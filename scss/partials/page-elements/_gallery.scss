@@ -5,10 +5,13 @@
                 @include flexArrange(h, space-around);
                 flex-wrap: wrap;
                 li {
-                    flex: 1 1 20%;
-                    margin: 1rem;
+                    flex: 1 1 30%;
+                    margin: 0.5rem;
+                    text-align: center;
+                    //height: auto;
                     img {
                         width: 100%;
+                        //max-width: 250px;
                         height: auto;
                         border-radius: 4px;
                     }
