@@ -1,2 +1,9 @@
-# mdb-personal-website
-An on-going, work-in-progress, following my development processes, ideas, and more as I build a personal site.
+# MDB Pesonal Website
+An on-going, work-in-progress repo that follows the development processes, ideas, experiments, resources, etc., for my personal site.
+
+
+## Table of Contents
+
+* [Overview](#overview)
+
+## <a name="overview"></a>Overview
