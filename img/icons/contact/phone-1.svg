@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64"><g  transform="translate(0.5, 0.5)">
-<circle data-color="color-2" fill="none" stroke="#91a2df" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" cx="32" cy="44" r="8" stroke-linejoin="round"/>
-<polygon fill="none" stroke="#91a2df" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" points="60,48 42,28 22,28 
-4,48 4,60 60,60 " stroke-linejoin="round"/>
-<path fill="none" stroke="#91a2df" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M2,14v8h16v-8h28v8h16v-8
-c0-4.4-3.6-8-8-8H10C5.6,6,2,9.6,2,14z" stroke-linejoin="round"/>
-</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" x="0" y="0" viewBox="0 0 64 64"><g transform="translate(0.5, 0.5)"><circle cx="32" cy="44" r="8" fill="none" stroke="#91a2df" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" data-color="color-2"/><polygon fill="none" stroke="#91a2df" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" points="60 48 42 28 22 28 4 48 4 60 60 60"/><path fill="none" stroke="#91a2df" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" d="M2,14v8h16v-8h28v8h16v-8 c0-4.4-3.6-8-8-8H10C5.6,6,2,9.6,2,14z"/></g></svg>
