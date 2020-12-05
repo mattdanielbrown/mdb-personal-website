@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64"><g  transform="translate(0.5, 0.5)">
-<polyline data-cap="butt" data-color="color-2" fill="none" stroke="#91a2df" stroke-width="3" stroke-miterlimit="10" points="2,10 32,32 62,10 " stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="2" y="10" fill="none" stroke="#91a2df" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" width="60" height="44" stroke-linejoin="round"/>
-</g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" x="0" y="0" viewBox="0 0 64 64"><g transform="translate(0.5, 0.5)"><polyline fill="none" stroke="#91a2df" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" points="2 10 32 32 62 10" data-cap="butt" data-color="color-2"/><rect width="60" height="44" x="2" y="10" fill="none" stroke="#91a2df" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/></g></svg>
