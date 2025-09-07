@@ -30,7 +30,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "postcss": "^5.2.4",
-    "postcss-scss": "^0.3.1",
+    "postcss-scss": "^4.0.9",
     "stylelint": "^7.4.2",
     "stylelint-config-standard": "^13.0.2"
   }
